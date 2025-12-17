@@ -106,8 +106,8 @@ Authorization: Bearer <JWT_TOKEN>
 
 ## ⚙️ Environment Variables
 
-MONGO_URI=mongodb+srv://satakshisamant04_db_user:satakshi1234@cluster0.sxalpit.mongodb.net/?appName=Cluster0
-JWT_SECRET=mysupersecretkey
+MONGO_URI
+JWT_SECRET
 PORT=3000
 
 
