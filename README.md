@@ -1,163 +1,160 @@
-🔐 User Account & Access Management API
+# 🔐 User Account & Access Management API
 
-A secure and scalable MERN Stack Authentication System implementing industry-standard authentication and authorization workflows. This project demonstrates how modern web applications manage user identity, access control, and protected resources.
+A secure **MERN Stack Authentication System** implementing JWT-based authentication, protected routes, and user profile management.  
+Designed following **industry-level backend practices** suitable for fintech and product-based companies.
 
-🚀 Tech Stack
+---
 
-Frontend
+## 🚀 Tech Stack
 
-React.js
+### Frontend
+- React.js
+- Axios
+- React Router
+- Tailwind CSS / CSS
 
-Axios
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JSON Web Token (JWT)
+- bcrypt.js
 
-React Router
+### Deployment
+- Frontend: Vercel  
+- Backend: Render  
+- Database: MongoDB Atlas
 
-Tailwind CSS / CSS
+---
 
-Backend
+## ✨ Features
 
-Node.js
+- JWT-based User Authentication (Login & Register)
+- Secure Password Hashing using bcrypt
+- Protected Routes using Auth Middleware
+- User Profile Fetch & Update
+- Change Password & Delete Account
+- Clean RESTful API Architecture
 
-Express.js
+---
 
-MongoDB (Mongoose)
+## 📂 Project Structure
 
-JSON Web Tokens (JWT)
 
-bcrypt.js
-
-Deployment
-
-Frontend: Vercel
-
-Backend: Render
-
-Database: MongoDB Atlas
-
-✨ Key Features
-
-🔐 JWT-based Authentication
-
-Secure user login and registration
-
-Token-based session management
-
-🛡️ Protected Routes & Middleware
-
-Authentication middleware to protect APIs
-
-Access control using Bearer tokens
-
-👤 User Profile Management
-
-Fetch user profile
-
-Update name and email
-
-Change password securely
-
-Delete user account
-
-🔑 Password Security
-
-Password hashing using bcrypt
-
-Secure password update workflow
-
-📦 RESTful API Design
-
-Clean separation of routes, controllers, and middleware
-
-Scalable backend architecture
-
-📂 Project Structure
 User-Account-Access-Management/
 │
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── src/
-│   └── package.json
-│
 ├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── services/
+│ │ └── App.js
+│ ├── public/
+│ └── package.json
+│
+├── backend/
+│ ├── controllers/
+│ ├── middleware/
+│ ├── models/
+│ ├── routes/
+│ ├── src/
+│ │ └── server.js
+│ └── package.json
 │
 └── README.md
 
-🔌 API Endpoints
-Auth Routes
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Login user
-User Routes (Protected)
-Method	Endpoint	Description
-GET	/api/users/profile	Fetch user profile
-PUT	/api/users/update	Update profile
-PUT	/api/users/change-password	Change password
-DELETE	/api/users/delete	Delete account
-🔐 Authentication Flow
 
-User registers or logs in
+---
 
-Server generates a JWT
+## 🔌 API Endpoints
 
-Token is stored on the client
+### Authentication Routes
+POST /api/auth/register → Register new user
+POST /api/auth/login → Login user
 
-Token is sent in headers for protected routes:
+
+### User Routes (Protected)
+GET /api/users/profile → Get user profile
+PUT /api/users/update → Update profile
+PUT /api/users/change-password → Change password
+DELETE /api/users/delete → Delete account
+
+
+---
+
+## 🔐 Authentication Flow
+
+User Login/Register
+↓
+JWT Generated
+↓
+Token Stored on Client
+↓
+Authorization Header Sent
+↓
+Middleware Validates Token
+↓
+Protected Route Access
+
+
+### Header Format
 
 Authorization: Bearer <JWT_TOKEN>
 
 
-Middleware validates token before allowing access
+---
 
-⚙️ Environment Variables
-
-Create a .env file in the backend folder:
+## ⚙️ Environment Variables
 
 MONGO_URI=mongodb+srv://satakshisamant04_db_user:satakshi1234@cluster0.sxalpit.mongodb.net/?appName=Cluster0
 JWT_SECRET=mysupersecretkey
 PORT=3000
 
 
-▶️ Run Locally
-Backend
+---
+
+## ▶️ Run Project Locally
+
+### Backend
 cd backend
 npm install
 npm run dev
 
-Frontend
+
+### Frontend
+
 cd frontend
 npm install
 npm start
 
-📌 Learning Outcomes
 
-Implemented secure authentication workflows
+---
 
-Understood JWT lifecycle & middleware
+## 📌 Learning Outcomes
 
-Designed REST APIs with role-ready architecture
+- Implemented JWT Authentication from scratch
+- Designed secure REST APIs
+- Used middleware for route protection
+- Integrated frontend & backend securely
+- Learned deployment with environment variables
 
-Integrated frontend and backend securely
+---
 
-Gained experience with deployment & environment configs
+## 🧠 Future Enhancements
 
-🧠 Future Enhancements
+Role Based Access Control (RBAC)
 
-Role-Based Access Control (Admin/User)
+Refresh Token Implementation
 
-Rate limiting & request logging
+Rate Limiting & API Logging
 
-Refresh token implementation
+OAuth (Google / GitHub Login)
 
-OAuth (Google / GitHub login)
+Email Verification & Password Reset
 
-Email verification & password reset
 
-📄 License
+---
 
-This project is for learning and demonstration purposes.
+## 📄 License
+
+This project is created for **learning, demonstration, and portfolio use**.
